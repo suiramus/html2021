@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Accordion - Vanilla JS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" media="screen" href="style.css">
+</head>
+<body>
+
+
+<div class="wrapper">
+
+	<h1>Accordion</h1>
+	
+	<!-- Accordion: Only One Item Open -->
+
+	<h3>Accordion: Only One Item Open</h3>
+
+	<div class="accordion acc-single-open">
+
+		<div class="acc-container">
+			<h3 class="acc-title">Super long title of accordion title</h3>
+			<div class="acc-content">
+				<p>Lorem ipsum, dolor sit amet consectetur adipisicing, elit. Facere magnam perspiciatis odio iste iure ab a hic laboriosam nulla, unde officiis aperiam vero, ut aspernatur ipsam excepturi dignissimos quisquam mollitia modi. Repudiandae est architecto, quisquam assumenda amet excepturi, expedita velit?</p>
+			</div><!-- acc-content -->
+		</div><!-- acc-container -->
+
+		<div class="acc-container">
+			<h3 class="acc-title">Question Two</h3>
+			<div class="acc-content">
+				<p>Lorem ipsum, dolor sit amet consectetur adipisicing, elit. Facere magnam perspiciatis odio iste iure ab a hic laboriosam nulla, unde officiis aperiam vero, ut aspernatur ipsam excepturi dignissimos quisquam mollitia modi. Repudiandae est architecto, quisquam assumenda amet excepturi, expedita velit?</p>
+				<p>Lorem ipsum, dolor sit amet consectetur adipisicing, elit. Facere magnam perspiciatis odio iste iure ab a hic laboriosam nulla, unde officiis aperiam vero, ut aspernatur ipsam excepturi dignissimos quisquam mollitia modi. Repudiandae est architecto, quisquam assumenda amet excepturi, expedita velit?</p>
+				<p>Lorem ipsum, dolor sit amet consectetur adipisicing, elit. Facere magnam perspiciatis odio iste iure ab a hic laboriosam nulla, unde officiis aperiam vero, ut aspernatur ipsam excepturi dignissimos quisquam mollitia modi. Repudiandae est architecto, quisquam assumenda amet excepturi, expedita velit?</p>
+				<p>Lorem ipsum, dolor sit amet consectetur adipisicing, elit. Facere magnam perspiciatis odio iste iure ab a hic laboriosam nulla, unde officiis aperiam vero, ut aspernatur ipsam excepturi dignissimos quisquam mollitia modi. Repudiandae est architecto, quisquam assumenda amet excepturi, expedita velit?</p>
+			</div><!-- acc-content -->
+		</div><!-- acc-container -->
+
+		<div class="acc-container">
+			<h3 class="acc-title">This is the third question</h3>
+			<div class="acc-content">
+				<p>Lorem ipsum, dolor sit amet consectetur adipisicing, elit. Facere magnam perspiciatis odio iste iure ab a hic laboriosam nulla, unde officiis aperiam vero, ut aspernatur ipsam excepturi dignissimos quisquam mollitia modi. Repudiandae est architecto, quisquam assumenda amet excepturi, expedita velit?</p>
+			</div><!-- acc-content -->
+		</div><!-- acc-container -->
+
+	</div><!-- accordion -->
+
+
+	<!-- Accordion: Multiple Items Open -->
+
+	<h3>Accordion: Multiple Items Open</h3>
+
+	<div class="accordion acc-multiple-open">
+
+		<div class="acc-container">
+			<h3 class="acc-title">What is my favorite programming language?</h3>
+			<div class="acc-content">
+				<p>Lorem ipsum, dolor sit amet consectetur adipisicing, elit. Facere magnam perspiciatis odio iste iure ab a hic laboriosam nulla, unde officiis aperiam vero, ut aspernatur ipsam excepturi dignissimos quisquam mollitia modi. Repudiandae est architecto, quisquam assumenda amet excepturi, expedita velit?</p>
+			</div><!-- acc-content -->
+		</div><!-- acc-container -->
+
+		<div class="acc-container">
+			<h3 class="acc-title">Acc Title</h3>
+			<div class="acc-content">
+				<p>Lorem ipsum, dolor sit amet consectetur adipisicing, elit. Facere magnam perspiciatis odio iste iure ab a hic laboriosam nulla, unde officiis aperiam vero, ut aspernatur ipsam excepturi dignissimos quisquam mollitia modi. Repudiandae est architecto, quisquam assumenda amet excepturi, expedita velit?</p>
+			</div><!-- acc-content -->
+		</div><!-- acc-container -->
+
+		<div class="acc-container">
+			<h3 class="acc-title">Acc Title</h3>
+			<div class="acc-content">
+				<p>Lorem ipsum, dolor sit amet consectetur adipisicing, elit. Facere magnam perspiciatis odio iste iure ab a hic laboriosam nulla, unde officiis aperiam vero, ut aspernatur ipsam excepturi dignissimos quisquam mollitia modi. Repudiandae est architecto, quisquam assumenda amet excepturi, expedita velit?</p>
+			</div><!-- acc-content -->
+		</div><!-- acc-container -->
+
+	</div><!-- accordion -->
+
+
+</div><!-- wrapper -->
+
+
+<script>
+	// https://codepen.io/codeorum/pen/JjGzMRQ
+	// https://codeorum.com/tutorials/simple-accordion-collapsible-element-with-vanilla-js-and-simple-animation-effect
+
+	// Accordion
+	// initAccordion('.accordion', true);
+	// initAccordion('.accordion', false);
+	function initAccordion(elem, option){
+		document.addEventListener('click', function (e) {
+			// Daca elementul nu este .acc-title, nu fa nimic
+			if (!e.target.matches(elem+' .acc-title')) return;
+			else {
+				// Daca parintele (.acc-container) lui .acc-title are clasa .acc-active
+				if(!e.target.parentElement.classList.contains('acc-active')) {
+					// Daca option==true, sterge clasa .acc-active pentru celelalte elemente
+					if(option==true) {
+						var elementList = document.querySelectorAll(elem+' .acc-container');
+						Array.prototype.forEach.call(elementList, function (e) {
+	                        e.classList.remove('acc-active');
+						});
+					}
+					// Daca nu are clasa .acc-active, adauga clasa .acc-active
+					e.target.parentElement.classList.add('acc-active');
+				} else {
+					// Daca are clasa .acc-active, remove clasa .acc-active
+					e.target.parentElement.classList.remove('acc-active');
+				}
+			}
+		});
+	}
+
+	// Deschide doar unul, inchide celelalte
+	initAccordion('.accordion.acc-single-open', true);
+	// Deschide multiple, fara a inchide celelalte
+	initAccordion('.accordion.acc-multiple-open', false);
+
+</script>
+
+
+</body>
+</html>
