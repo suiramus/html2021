@@ -1,0 +1,127 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+*, *:before, *:after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+}
+
+#menu-line {
+	width: 100%;
+	margin-top: 10px;
+	margin-bottom: 120px;
+	border-top: 1px solid rgba(0,0,0,.2);
+}
+
+#menu-line ul {
+	list-style: none;
+	display: flex;
+	max-width: 1200px;
+	margin: 0 auto;
+	align-items: center;
+	justify-content: center;
+}
+
+#menu-line ul li {
+	padding: 21px 25px;
+}
+
+#menu-line a {
+	text-decoration: none;
+	font-size: 18px;
+	display: block;
+	position: relative;
+	transition: color .5s ease-in-out;
+}
+
+#menu-line a:before {
+	content: '';
+	position: absolute;
+	height: 4px;
+	width: 0;
+	right: 0;
+	top: -23px;
+	display: block;
+	background: #FF5F14;
+	/*transition: width .5s ease-in-out;*/
+	transition: width .5s cubic-bezier(.25,.8,.25,1) 0s;
+}
+
+#menu-line a.active-link:before {
+	width: 100%;
+}
+
+#menu-line a.active-link,
+#menu-line li:hover a {
+	color: #FF5F14;
+}
+
+#menu-line li:hover a:before {
+	width: 100%;
+	left: 0;
+}
+
+/* Hover2 */
+
+ul#hover2 {
+	display: flex;
+	justify-content: center;
+	list-style: none;
+	font-size: 18px;
+}
+
+ul#hover2 li {
+	padding: 10px 20px;
+}
+
+ul#hover2 a {
+	text-decoration: none;
+	position: relative;
+	color: #FF5F14;
+	transition: color .5s cubic-bezier(.25,.8,.25,1) 0s;
+}
+
+#hover2 a.active-link,
+ul#hover2 li:hover a {
+	color: #001659;
+}
+
+
+ul#hover2 a:before {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 0;
+	height: 4px;
+	bottom: -20px;
+	right: 0;
+	background: #001659;
+	transition: width .5s cubic-bezier(.25,.8,.25,1) 0s;
+}
+
+#hover2 a.active-link:before {
+	width: 100%;
+}
+
+ul#hover2 li:hover a:before {
+	width: 100%;
+	left: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
