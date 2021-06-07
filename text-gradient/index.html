@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Text Gradient</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+	body {
+		background: #E6FAFF;
+	}
+
+	.wrap {
+		max-width: 600px;
+		margin: 40px auto;
+		padding: 20px 40px 60px;
+		background: #040d21;
+		border-radius: 4px;
+		font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+	}
+
+	.text-gradient {
+		font-size: 22px;
+	}
+
+	.tg-1 {
+		background: linear-gradient(270deg,#a2facf 10%,#64acff 95%);
+		background-clip: border-box;
+		-webkit-background-clip: text;
+		background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+
+	.tg-2 {
+		background: linear-gradient(270deg, #ff2f2f 20%, #ffa802 50%, #337aff 95%);
+		background-clip: border-box;
+		-webkit-background-clip: text;
+		background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+
+	.tg-3 {
+		background: linear-gradient(270deg, #ff2f2f 25%, #337aff 75%);
+		background-clip: border-box;
+		-webkit-background-clip: text;
+		background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+
+	a.read-more {
+		display: inline-block;
+		font-size: 20px;
+		line-height: 1;
+		text-decoration: none;
+		color: #2188ff;
+		transition: all .2s;
+	}
+
+	a.read-more:hover {
+		text-decoration: underline;
+		color: #035bd6;
+	}
+
+	a.read-more:after {
+		content: "\00BB";
+		display: inline-block;
+		font-size: 120%;
+		padding-left: 10px;
+		transform: translateX(0);
+		transition: all .2s;
+	}
+
+	a.read-more:hover:after {
+		transform: translateX(6px);
+	}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+	<p class="text-gradient tg-1">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores perspiciatis sit quidem hic, aliquam rem asperiores nesciunt saepe delectus adipisci?</p>
+	<a href="#" class="read-more">Read More</a>
+</div><!-- wrap -->
+
+<div class="wrap">
+	<p class="text-gradient tg-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores perspiciatis sit quidem hic, aliquam rem asperiores nesciunt saepe delectus adipisci? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum, voluptas?</p>
+	<a href="#" class="read-more">Read More</a>
+</div><!-- wrap -->
+
+<div class="wrap">
+	<p class="text-gradient tg-3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores perspiciatis sit quidem hic, aliquam rem asperiores nesciunt saepe delectus adipisci?</p>
+	<a href="#" class="read-more">Read More</a>
+</div><!-- wrap -->
+
+
+</body>
+</html>
