@@ -38,3 +38,12 @@ setTimeout(() => {
 
 // Run every second
 setInterval(updateCountdown, 1000);
+
+console.log();
+const myvar = document.getElementById('myid');
+myvar.innerHTML = 'Some text';
+myvar.innerHTML = 'Another text';
+myvar.setAttribute('title', 'Title here');
+myvar.innerHTML = 'elem';
+let x = document.getElementsByClassName('myclass');
+let y = document.getElementById('my2id');
