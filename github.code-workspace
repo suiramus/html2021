@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		}
+	],
+	"settings": {
+		"workbench.colorTheme": "CodeSandbox",
+		"liveServer.settings.multiRootWorkspaceName": "- GitHub -",
+		"scm.countBadge": "off"
+	}
+}

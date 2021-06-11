@@ -13,6 +13,12 @@ html {
 	overflow-y: scroll;
 }
 
+html {
+	background: var(--background-color);
+	color: var(--background-color);
+	font-size: 18px;
+}
+
 body {
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 	font-size: 16px;
@@ -37,64 +43,64 @@ body {
 	overflow: hidden;
 }
 
-	.acc-title {
-		max-width: 100%;
-		background: #222;
-		color: #FFF;
-		border-radius: 4px;
-		padding: 14px 20px;
-		font-weight: normal;
-		position: relative;
-		transition: all .3s ease-in-out;
+.acc-title {
+	max-width: 100%;
+	background: #222;
+	color: #FFF;
+	border-radius: 4px;
+	padding: 14px 20px;
+	font-weight: normal;
+	position: relative;
+	transition: all .3s ease-in-out;
+}
+
+	.acc-active .acc-title,
+	.acc-title:hover {
+		background: #565656;
+		cursor: pointer;
 	}
 
-		.acc-active .acc-title,
-		.acc-title:hover {
-			background: #565656;
-			cursor: pointer;
-		}
-
-		.acc-title:after {
-			content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewbox='0 0 25 25'%3E%3Cline x1='6' y1='12.5' x2='19' y2='12.5' fill='none' stroke='%23FFFFFF' stroke-width='2' stroke-linecap='round' vector-effect='non-scaling-stroke' /%3E%3Cline y1='6' x1='12.5' y2='19' x2='12.5' fill='none' stroke='%23FFFFFF' stroke-width='2' stroke-linecap='round' vector-effect='non-scaling-stroke' /%3E%3C/svg%3E"); /*Plus sign*/
-			position: absolute;
-			right: 20px;
-			top: 50%;
-			margin-top: -12.5px;
-			width: 25px;
-			height: 25px;
-			display: inline-block;
-		}
-
-		.acc-active .acc-title:after {
-			content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewbox='0 0 25 25'%3E%3Cline x1='6' y1='12.5' x2='19' y2='12.5' fill='none' stroke='%23FFFFFF' stroke-width='2' stroke-linecap='round' vector-effect='non-scaling-stroke' /%3E%3C/svg%3E"); /*Minus sign*/
-		}
-
-	.acc-content {
-		width: 100%;
-		height: auto;
-		overflow: hidden;
-		max-height: 0;
-		opacity: 0;
-		padding: 0 20px;
-		transition: all 0.2s ease-in-out;
+	.acc-title:after {
+		content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewbox='0 0 25 25'%3E%3Cline x1='6' y1='12.5' x2='19' y2='12.5' fill='none' stroke='%23FFFFFF' stroke-width='2' stroke-linecap='round' vector-effect='non-scaling-stroke' /%3E%3Cline y1='6' x1='12.5' y2='19' x2='12.5' fill='none' stroke='%23FFFFFF' stroke-width='2' stroke-linecap='round' vector-effect='non-scaling-stroke' /%3E%3C/svg%3E"); /*Plus sign*/
+		position: absolute;
+		right: 20px;
+		top: 50%;
+		margin-top: -12.5px;
+		width: 25px;
+		height: 25px;
+		display: inline-block;
 	}
 
-	.acc-active .acc-content {
-		padding: 20px;
-		max-height: 500px;
-		overflow-y: auto;
-		opacity: 1;
+	.acc-active .acc-title:after {
+		content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewbox='0 0 25 25'%3E%3Cline x1='6' y1='12.5' x2='19' y2='12.5' fill='none' stroke='%23FFFFFF' stroke-width='2' stroke-linecap='round' vector-effect='non-scaling-stroke' /%3E%3C/svg%3E"); /*Minus sign*/
 	}
+
+.acc-content {
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	max-height: 0;
+	opacity: 0;
+	padding: 0 20px;
+	transition: all 0.2s ease-in-out;
+}
+
+.acc-active .acc-content {
+	padding: 20px;
+	max-height: 500px;
+	overflow-y: auto;
+	opacity: 1;
+}
 
 /*
 Plus Sign
 <svg viewbox="0 0 25 25">
-  <line x1="6" y1="12.5" x2="19" y2="12.5" fill="none" stroke="#FFFFFF" stroke-width="1" stroke-linecap="round" vector-effect="non-scaling-stroke" />
-  <line y1="6" x1="12.5" y2="19" x2="12.5" fill="none" stroke="#FFFFFF" stroke-width="1" stroke-linecap="round" vector-effect="non-scaling-stroke" />
+<line x1="6" y1="12.5" x2="19" y2="12.5" fill="none" stroke="#FFFFFF" stroke-width="1" stroke-linecap="round" vector-effect="non-scaling-stroke" />
+<line y1="6" x1="12.5" y2="19" x2="12.5" fill="none" stroke="#FFFFFF" stroke-width="1" stroke-linecap="round" vector-effect="non-scaling-stroke" />
 </svg>
 
 Minus Sign
 <svg viewbox="0 0 25 25">
-  <line x1="6" y1="12.5" x2="19" y2="12.5"  fill="none" stroke="#FFFFFF" stroke-width="1" stroke-linecap="round" vector-effect="non-scaling-stroke" />
+<line x1="6" y1="12.5" x2="19" y2="12.5"  fill="none" stroke="#FFFFFF" stroke-width="1" stroke-linecap="round" vector-effect="non-scaling-stroke" />
 </svg>
 */
