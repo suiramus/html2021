@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Accordion</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section>
+        <div class="section-heading">
+            <h2 class="section-title">FAQs</h2>
+            <h5 class="subtitle">Frequently Asked Question</h5>
+        </div><!-- .section-heading -->
+        <div class="faq">
+            <h3>What is Java Script?</h3>
+            <div class="answer">
+                <p>JavaScript is a scripting or programming language that allows you to implement complex features on web pages — every time a web page does more than just sit there and display static information for you to look at — displaying timely content updates, interactive maps, animated 2D/3D graphics, scrolling video jukeboxes, etc. — you can bet that JavaScript is probably involved. It is the third layer of the layer cake of standard web technologies, two of which (HTML and CSS) we have covered in much more detail in other parts of the Learning Area.</p>
+            </div>
+        </div><!-- .faq -->
+        <div class="faq">
+            <h3>What it is Like to Work as a Web Developer?</h3>
+            <div class="answer">
+                <p>Web developers build websites using more advanced tools than the simple template-based blog sites you can create on your own. As a web developer, you need to learn high-level coding skills to allow you to build websites or web-based apps. These apps can be used to input and output data, animate content, store information, process payments, or interact with other websites and social media apps.</p>
+            </div>
+        </div><!-- .faq -->
+        <div class="faq">
+            <h3>Web Developer Challenges</h3>
+            <div class="answer">
+                <p>One of the biggest challenge to most web developers experience is explaining technical ideas to non-technical clients. It requires a lot of patience and excellent communication skills to make sure everyone is on the same page. You need to learn the art of breaking down technical aspects of web development into simple basic level pieces that are easy to understand.</p>
+            </div>
+        </div><!-- .faq -->
+        <div class="faq">
+            <h3>PHP: Hypertext Preprocessor</h3>
+            <div class="answer">
+                <p>PHP is a server scripting language, and a powerful tool for making dynamic and interactive Web pages. PHP is a widely-used, free, and efficient alternative to competitors such as Microsoft's ASP.</p>
+            </div>
+        </div><!-- .faq -->
+    </section>
+
+<script>
+    const faqs = document.querySelectorAll('.faq');
+    faqs.forEach((faq) => {
+        faq.addEventListener("click", ()=>{
+            /* faqs.forEach((otherFaq) => {
+                if (otherFaq.classList == "active") {
+                    otherFaq.classList.remove("active");
+                }
+            }); */
+            faq.classList.toggle("active");
+        });
+    });
+</script>
+
+</body>
+</html>
