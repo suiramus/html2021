@@ -10,7 +10,7 @@
 <body>
     <section>
         <div class="section-heading">
-            <h2 class="section-title">FAQs</h2>
+            <h2 class="section-title">FAQ</h2>
             <h5 class="subtitle">Frequently Asked Question</h5>
         </div><!-- .section-heading -->
         <div class="faq">
@@ -40,15 +40,17 @@
     </section>
 
 <script>
-    const faqs = document.querySelectorAll('.faq');
+    /*const faqs = document.querySelectorAll('.faq');
     faqs.forEach((faq) => {
         faq.addEventListener("click", ()=>{
-            /* faqs.forEach((otherFaq) => {
-                if (otherFaq.classList == "active") {
-                    otherFaq.classList.remove("active");
-                }
-            }); */
             faq.classList.toggle("active");
+        });
+    });*/
+
+    const faqs = document.querySelectorAll('.faq h3');
+    faqs.forEach((faq) => {
+        faq.addEventListener("click", ()=>{
+            faq.closest('.faq').classList.toggle("active");
         });
     });
 </script>

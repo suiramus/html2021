@@ -23,7 +23,7 @@ body {
 
 section {
     margin: 0 auto;
-    padding: 1rem 20px;
+    padding: 1rem 20px 3rem;
 }
 
 .section-heading {
@@ -34,7 +34,7 @@ section {
 }
 
     .section-title {
-        font-size: 3rem;
+        font-size: 3.5rem;
         line-height: 1.2;
         text-align: center;
         margin: 2rem 0 1rem;
@@ -42,7 +42,7 @@ section {
 
     .subtitle {
         margin: 0;
-        font-size: 1.3rem;
+        font-size: 1.2rem;
         font-weight: normal;
     }
 
@@ -80,16 +80,12 @@ section {
     right: 0;
     top: 0;
     transform: scale(1,1);
+    transform: rotate(-90deg);
     transition: all .6s;
 }
 
-.faq h3:hover:after {
-    transform: scale(1.5,1.5);
-    transform: rotate(90deg);
-}
-
 .faq.active h3:after {
-    transform: rotate(-180deg);
+    transform: rotate(0deg);
 }
 
 .answer {
@@ -97,6 +93,7 @@ section {
     padding-right: 50px;
     color: darkgray;
     overflow: hidden;
+    opacity: .9;
     transition: max-height .8s ease;
 }
 
@@ -109,8 +106,8 @@ section {
 
 @keyframes fadeIn {
     from{
-        opacity: 0;
-        transform: translateY(-10px);
+        opacity: .2;
+        transform: translateY(20px);
     } to {
         opacity: 1;
         transform: translateY(0px);
