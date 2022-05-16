@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>gLightbox test</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	
+	<div class="wrap">
+		<div class="items">
+			<div class="gal-item">
+				<a class="glightbox" href="images/gm1.jpg"><img src="images/gm1.jpg" title="Image 1"></a>
+			</div><!-- gal-item -->
+			<div class="gal-item">
+				<a class="glightbox" href="images/gm2.jpg"><img src="images/gm2.jpg" title="Image 2"></a>
+			</div><!-- gal-item -->
+			<div class="gal-item">
+				<a class="glightbox" href="images/gm3.jpg"><img src="images/gm3.jpg" title="Image 3"></a>
+			</div><!-- gal-item -->
+			<div class="gal-item">
+				<a class="glightbox" href="images/gm4.jpg"><img src="images/gm4.jpg" title="Image 4"></a>
+			</div><!-- gal-item -->
+			<div class="gal-item">
+				<a class="glightbox2" href="images/gm5.jpg"><img src="images/gm5.jpg" title="Image 5"></a>
+			</div><!-- gal-item -->
+			<div class="gal-item">
+				<a class="glightbox2" href="images/gm6.jpg"><img src="images/gm6.jpg" title="Image 6"></a>
+			</div><!-- gal-item -->
+		</div><!-- items -->
+	</div><!-- wrap -->
+
+<script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+<script>
+	const lightbox = GLightbox({
+		selector: '.glightbox',
+		loop: true
+	});
+
+	const lightbox2 = GLightbox({
+		selector: '.glightbox2'
+	});
+
+</script>
+
+</body>
+</html>

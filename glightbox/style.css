@@ -1,0 +1,80 @@
+*,*:before,*:after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+.wrap {
+	max-width: 1200px;
+	padding: 20px;
+	margin: 0 auto;
+}
+
+.items {
+	display: flex;
+	flex-wrap: wrap;
+} 
+
+.gal-item {
+	max-width: 33.33%;
+	padding: 10px;
+	margin-bottom: 20px;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+}
+
+@media screen and (max-width: 800px) {
+	.gal-item {
+		max-width: 50%;
+	}
+} /* 800px media end */
+
+.gal-item a {
+	display: block;
+	--image-height: 250px;
+	width: 100%;
+	height: var(--image-height);
+	position: relative;
+	overflow: hidden;
+}
+
+.gal-item a::before {
+	content: '';
+	display: block;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: #000;
+	z-index: 99;
+	opacity: 0;
+	transition: opacity 0.4s;
+}
+
+.gal-item img {
+	display: block;
+	width: calc(100% + 50px);
+    max-width: calc(100% + 50px);
+    transition: opacity 0.35s, transform 0.35s;
+    transform: translate3d(-40px, 0, 0);
+
+	/*height: auto;*/
+	min-height: var(--image-height);
+	object-fit: cover;
+	object-position: center bottom;
+}
+
+.gal-item a:hover::before {
+	opacity: .5;
+}
+
+.gal-item a:hover img {
+	transform: translate3d(0, 0, 0);
+}
