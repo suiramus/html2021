@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Title</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" media="screen" href="styles.css">
+
+</head>
+<body>
+<div id="nav-bar" class="nav-bar">
+	<div class="nav-bar-wrap">
+		<div id="logo">MaxLogo</div>
+		<ul class="top-menu">
+			<li><a href="#">Home</a></li>
+			<li><a href="#">Services</a></li>
+			<li><a href="#">Portfolio</a></li>
+			<li><a href="#">About Us</a></li>
+			<li><a href="#">Contact</a></li>
+		</ul>
+	</div><!-- nav-bar-wrap -->
+</div>
+<div class="header">
+	<div class="header-overlay">
+		<div class="big-text">Hello World</div>
+	</div>
+</div>
+
+<div style="max-width: 600px; margin: 80px auto;">
+	<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Diuod soluta accusantium repudiandae expedita totam explicabo repellat quibusdam veniam vel sit, nesciuos explicabo nostrum, assumenda quos numquam dolorum voluptatibus illo aspernatur perspiciatis amet harum hic laborum, dolore? Repudiandae, ut, delectus. Accusamus ipsa, delectus sed, nisi quis, tempore tempora mollitia labore porro eveniet eos incidunt expedita, accusantium quaerat officiis esse. Ex reiciendis nihil, dolore unde, enim, cupiditate optio officia accusamus quaerat eum, illum quibusdam obcaecati rerum neque consesequi voluptatum nam minus totam ipsum dolores iste?</p>
+	<p>Lorem ipsum, dolor sit amet consectetur, adipisicing elit. Maiores laboriosam, dicta corporis aspernatur nulla doloremque consequatur omnis, consectetur totam magnam ratione velit nobis facilis quidem accusamus rem, earum, dolorem fugit atque possimus nemo? Fugiat tempore magnam velit, inventore porro expedita unde amet officiis ea perspiciatis vel dolorum libero sit quos modi. Quia dignissimos consequatur eligendi a accusamus, similique, est quibusdam! Recusandae culpa in rerum id quod cupiditate odio quo voluptas nobis. Unde harum cumque enim qui mollitia ipsum excepturi non iure eaque praesentium eligendi, maxime nulla quos laborum perspiciatis consectetur suscipit nisi officiis cum sapiente. Culpa vitae cum aut quibusdam.</p>
+	<p>Lorem ipsum, dolor sit amet consectetur, adipisicing elit. Maiores laboriosam, dicta corporis aspernatur nulla doloremque consequatur omnis, consectetur totam magnam ratione velit nobis facilis quidem accusamus rem, earum, dolorem fugit atque possimus nemo? Fugiat tempore magnam velit, inventore porro expedita unde amet officiis ea perspiciatis vel dolorum libero sit quos modi. Quia dignissimos consequatur eligendi a accusamus, similique, est quibusdam! Recusandae culpa in rerum id quod cupiditate odio quo voluptas nobis. Unde harum cumque enim qui mollitia ipsum excepturi non iure eaque praesentium eligendi, maxime nulla quos laborum perspiciatis consectetur suscipit nisi officiis cum sapiente. Culpa vitae cum aut quibusdam.</p>
+</div>
+<div id="demo"></div>
+
+<script>
+document.addEventListener("scroll", topBarScroll);
+
+function topBarScroll() {
+	// console.log(window.scrollY);
+	let navBar = document.getElementById("nav-bar");
+	let navBarHeight = navBar.clientHeight;
+	// console.log(navBarHeight);
+
+  if (window.scrollY > navBarHeight + 50) {
+  	navBar.classList.add("nav-bar-scoll");
+  } else {
+  	navBar.classList.remove("nav-bar-scoll");
+  }
+}
+
+	
+
+</script>
+</body>
+</html>
