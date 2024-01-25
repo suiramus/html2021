@@ -28,8 +28,8 @@ body {
 }
 
 #nav-bar.nav-bar-scoll {
-	background: rgba(33, 118, 255, 1);
-	height: 60px;
+	background: rgb(0, 23, 61);
+	height: 80px;	
 }
 
 .nav-bar-wrap {
